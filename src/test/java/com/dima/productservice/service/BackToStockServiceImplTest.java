@@ -27,8 +27,8 @@ public class BackToStockServiceImplTest {
     @Before
     public void createTestEntities() {
         this.product = new Product(1L, "Java for professional", ProductCategory.BOOKS);
-        this.user = new User("Dima", true, 19);
-        this.user2 = new User("Kirill", false, 20);
+        this.user = new User("Dima", true, 19, "someemail@email.com");
+        this.user2 = new User("Kirill", false, 20, "someemail@email.com");
     }
 
 
@@ -73,6 +73,13 @@ public class BackToStockServiceImplTest {
      public void getProductSubscriptions() {
         backToStockService.subscribe(product, user);
         backToStockService.subscribe(product, user2);
-        assertEquals(backToStockService.findUsersWithHighestPriority(product).size(), 1);
+        assertEquals(backToStockService.getProductSubscriptions().size(), 1);
+    }
+
+    @Test
+    public void testIsHighestPriorityUser() {
+        backToStockService.subscribe(product, user);
+        assertTrue(backToStockService.isHighestPriorityUser(user, product));
+        assertFalse(backToStockService.isHighestPriorityUser(user2, product));
     }
 }

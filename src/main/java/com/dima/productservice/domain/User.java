@@ -17,5 +17,5 @@ public class User {
     private String name;
     private Boolean premium;
     private Integer age;
-
+    private String email;
 }

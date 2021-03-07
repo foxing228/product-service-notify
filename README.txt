@@ -1,26 +1,26 @@
-Задача (BackToStock)
-Наш клиент AmazingCo попросил разрешить пользователям подписываться на товары, которых нет в наличии.
-Идея состоит в том, чтобы уведомить клиентов, когда товар снова появится в наличии.
-В то же время у них уже есть премиум-пользователи, а также некоторые пользователи могут иметь
-приоритет для определенных категорий товаров.
-Правила:
-- премиум-пользователь имеет высокий приоритет
-- пользователям старше 70 лет:
-- высокий приоритет для медицинских изделий
-- средний приоритет для всех категорий
-- FIFO для всего остального
-Критерии (от высокого к низкому)
-Правильность
-Качество кода, читаемость, обработка ошибок в соответствии с лучшими практиками
-Модульные тесты
-Гибкость
-Шаблон
-Примечания:
-вам не нужна БД
-вам не нужен UI, API и т. д.
-вы не беспокоитесь о параллелизме
-сосредоточиться на домене
-Вы можете использовать:
-Ява
-Gradle или maven
-Представьте, что это не тестовое задание, а настоящая производственная задача.
+Task (BackToStock)
+Our customer AmazingCo asked to let users to subscribe products that are out of stock.
+The idea is to notify customers when the product back in stock.
+At the same time they have already in place premium users and also some users may have
+priority for particular product categories.
+Rules:
+- the premium user has a high priority
+- users elder than 70 years old has:
+- high priority for medical products
+- medium priority for all categories
+- FIFO for all the rest
+Criteria (from high to low)
+Correctness
+Code quality, readability, error handling, following the best practice
+Unit tests
+Flexibility
+Pattern
+Notes:
+you don't need DB
+you don't need UI, API, etc
+you don't worry about concurrency
+focus on domain
+You may use:
+java
+Gradle or maven
+Imagine that this is not a test task, but a real production task
