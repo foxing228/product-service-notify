@@ -29,14 +29,18 @@ public class BackToStockServiceImpl implements BackToStockService {
             if(productUsers.contains(user)) {
                 throw new UserSubscribeException("User already subscribed");
             }
-            productUsers.add(user);
+            else {
+                productUsers.add(user);
+            }
         }
-        productSubscriptions.put(product, new ArrayList<>(List.of(user)));
+        else {
+            productSubscriptions.put(product, new ArrayList<>(List.of(user)));
+        }
     }
 
     @Override
     public List<User> subscribedUsers(Product product) {
-        return  Objects.nonNull(productSubscriptions.get(product)) ? productSubscriptions.get(product) : Collections.emptyList();
+        return Objects.nonNull(productSubscriptions.get(product)) ? productSubscriptions.get(product) : Collections.emptyList();
     }
 
     public List<User> findUsersWithHighestPriority(Product product) {

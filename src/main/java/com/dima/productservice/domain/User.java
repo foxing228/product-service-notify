@@ -18,6 +18,4 @@ public class User {
     private Boolean premium;
     private Integer age;
 
-    private List<Product> products = new ArrayList<>();
-
 }
